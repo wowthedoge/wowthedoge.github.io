@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>wowthedoge</title>
+    <link rel="icon" href="./avatar.jpeg" type="image/jpeg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ["Space Grotesk", "mono"],
+              inter: ["Inter", "sans-serif"],
+            },
+
+            colors: {
+              dark: "#031417",
+              accent: "#073A41",
+              light: "#B2CACD",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="index.js"></script>
+    <script src="pages/projectsPage.js"></script>
+    <script src="pages/aboutPage.js"></script>
+    <script src="pages/thoughtsPage.js"></script>
+  </head>
+  <body class="bg-dark text-white select">
+    <div id="content" class="max-w-2xl mt-20 mx-auto px-10">
+      <header class="flex items-center justify-between py-3 font-mono">
+        <div class="flex items-center gap-3">
+          <img src="./avatar.jpeg" alt="avatar" class="w-8 h-8 rounded-full" />
+          <div class="flex flex-col gap-1">
+            <span class="text-white text-lg font-bold">Kah Hong Tan </span>
+            <span
+              class="text-white text-sm font-medium bg-accent rounded-md text-center"
+              >wowthedoge
+            </span>
+          </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="hidden sm:flex gap-4">
+          <a
+            id="aboutTag"
+            href="#about"
+            class="text-white text-md rounded-lg hover:bg-accent duration-300 text-center py-[4px] px-[16px]"
+            onclick="renderAboutPage()"
+            >About</a
+          >
+          <a
+            id="projectsTag"
+            href="#projects"
+            class="text-white text-md rounded-lg hover:bg-accent duration-300 text-center py-[4px] px-[16px]"
+            onclick="renderProjectsPage()"
+            >Projects</a
+          >
+          <a
+            id="thoughtsTag"
+            href="#thoughts"
+            class="text-white text-md rounded-lg hover:bg-accent duration-300  py-[4px] px-[16px]"
+            onclick="renderThoughtsPage()"
+            >Thoughts</a
+          >
+        </nav>
+
+        <!-- Hamburger -->
+        <button
+          id="menu"
+          class="text-white block sm:hidden"
+          onclick="openMenu()"
+          aria-label="Menu"
+        >
+          <i class="fa fa-bars"></i>
+          <nav
+            id="menu-navbar"
+            class="max-h-0 overflow-hidden duration-500 ease-in-out gap-2 flex flex-col absolute text-right right-[45px] top-[160px] border-r"
+          >
+            <a
+              id="aboutTag"
+              href="#about"
+              class="text-white text-md rounded-lg hover:bg-accent duration-300 text-right px-4 py-1"
+              onclick="renderAboutPage()"
+              >About</a
+            >
+            <a
+              id="projectsTag"
+              href="#projects"
+              class="text-white text-md rounded-lg hover:bg-accent duration-300 text-right px-4 py-1"
+              onclick="renderProjectsPage()"
+              >Projects</a
+            >
+            <a
+              id="thoughtsTag"
+              href="#thoughts"
+              class="text-white text-md rounded-lg hover:bg-accent duration-300 text-right px-4 py-1"
+              onclick="renderThoughtsPage()"
+              >Thoughts</a
+            >
+          </nav>
+        </button>
+      </header>
+
+      <main class="my-10"></main>
+
+      <footer
+        class="py-6 mb-20 flex items-center justify-between text-light font-mono"
+      >
+        <!-- Social Links -->
+        <div class="flex text-xl gap-2">
+          <a
+            href="https://instagram.com/kahhong01"
+            aria-label="Instagram"
+            class="text-light hover:text-white duration-300"
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kah-hong-tan-793a8b121/"
+            aria-label="LinkedIn"
+            class="text-light hover:text-white duration-300"
+          >
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          <a
+            href="https://github.com/wowthedoge"
+            aria-label="GitHub"
+            class="text-light hover:text-white duration-300"
+          >
+            <i class="fa fa-github"></i>
+          </a>
+          <a
+            href="https://medium.com/@wowthedoge"
+            aria-label="Medium"
+            class="text-light hover:text-white duration-300"
+          >
+            <i class="fa fa-medium"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-sm">2025 © Kah Hong Tan</div>
+      </footer>
+    </div>
+  </body>
+</html>
