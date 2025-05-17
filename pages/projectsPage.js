@@ -1,11 +1,18 @@
 const projects = [
   {
-    title: "Compiler in Haskell and C",
-    description: "A reusable project component loaded dynamically.",
+    title: "JIT compiler in Haskell and C",
+    description: 
+`
+I've been curious about runtimes for a while now - how the JVM/CLR works, multithreading, event loops, async and coroutines, garbage collection. This project is only to learn about those - I'm not releasing a new language anytime soon (though that would be cool). 
+
+This is my second attempt - in my first attempt I bit off a bit too much and attempted it in C++ with LLVM, though I didn't have much experience with low-level programming. This time I started with Haskell (I love Haskell’s syntax and a functional language is a little nicer for a recursive parsing) compiling into bytecode for a C-based interpreter that manually manages memory. That's all, though - I ain't touching assembly (yet?)`,
     tags: ["Haskell", "C", "Compilers"],
     links: [
-      { href: "https://github.com", icon: "fa-github", label: "GitHub" },
-      { href: "https://example.com", icon: "fa-globe", label: "Website" },
+      {
+        href: "https://github.com/wowthedoge/haskellpiler",
+        icon: "fa-github",
+        label: "GitHub",
+      },
     ],
   },
   {
@@ -15,8 +22,8 @@ const projects = [
     links: [
       { href: "https://github.com", icon: "fa-github", label: "GitHub" },
       { href: "https://example.com", icon: "fa-globe", label: "Website" },
-    ]
-  }
+    ],
+  },
 ];
 
 function renderProjectsPage() {
@@ -65,8 +72,8 @@ function renderProjectsPage() {
     title.className = "font-bold text-xl mb-2";
     title.textContent = project.title;
 
-    const description = document.createElement("p");
-    description.className = "text-md mb-3";
+    const description = document.createElement("pre");
+    description.className = "text-md mb-3 whitespace-pre-wrap font-inter";
     description.textContent = project.description;
 
     const linksDiv = document.createElement("div");

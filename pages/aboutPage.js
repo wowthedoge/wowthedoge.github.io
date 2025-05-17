@@ -12,13 +12,12 @@ const currentWorkText = `
 - At work: Implementing oAuth token enhancements to prevent replay attacks
 - Building a JIT compiler with Haskell and C
 - oAuth from scratch in .NET
-- Learning German
 `
 
 const futurePlansText = `
-- Contributing to the TypeScript MCP SDK
-- Docker client from scratch
+- Contributing to the TypeScript MCP SDK. I believe the MCP will be huge in the near future, and there will be endpoints to connect LLMs to the software infrastructure and development lifecycle in many different areas, such as documentation, authorization policies, schema management, etc. I'm particularly interested in how this can be done securely. 
 `
+
 function replaceTextWithLink(text) {
   const replaceWith = {
     "ByteByteGo": "https://www.linkedin.com/company/bytebytego/posts/?feedView=all",
