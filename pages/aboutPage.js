@@ -1,15 +1,15 @@
 const aboutText = `
-Hi! I am a software engineer, currently based in Malaysia.
+Hi! I am a software engineer, currently based in Malaysia. Welcome to my portfolio site.
 
-I’m currently a software engineer at Ideagen, working on a secure document collaboration platform used by governments, accounting firms, banks, and other corporaty corporates. I’ve had the opportunity to work on many areas of software, from frontend to backend to cloud and devops and a little cybersecurity.
+I’m currently working in Ideagen, on a secure FedRAMP-authorized document collaboration platform used by US governments, accounting firms like EY and Baker Tilly, banks, and other large corporations. I’ve had the opportunity to work on the full software stack, from frontend to backend to cloud and devops and security.
 
-In 2018, I wrote my first Hello World when considering computer science as a major. My first few personal projects were random apps and games that I did for fun, but it wasn’t until I stumbled upon ByteByteGo, open source, cloud-native infrastructure and ThePrimeagen that I really got into the world of software engineering. I enjoy the deep technical complexity, learning how things work under the hood and the challenges of optimizing and automating systems.
+In 2018, I wrote my first Hello World when considering computer science as a major. My first few personal projects were random apps and games that I did for fun, but it wasn’t until I stumbled upon ByteByteGo, open source, cloud-native projects and ThePrimeagen that I really got into the world of software engineering. I enjoy the deep technical complexity, learning how things work under the hood and the challenges of optimizing, automating and securing systems.
 
-Apart from tech, I like literature, art, and being in nature. My dream is to work on interesting projects during the weekdays, and retire into the mountains during the weekends.
+Apart from tech, I like literature, art, and being in nature. My dream is to work on interesting projects during the weekdays, and hike in the mountains during the weekends.
 `
 
 const currentWorkText = `
-- At work: Implementing oAuth token enhancements to prevent replay attacks
+- At work: Implementing the oAuth DPoP enhancement and token exchange to prevent token replay attacks
 - Building a JIT compiler with Haskell and C
 - oAuth from scratch in .NET
 `
@@ -24,7 +24,9 @@ function replaceTextWithLink(text) {
     "ThePrimeagen": "https://www.youtube.com/c/theprimeagen",
     "Ideagen": "https://www.ideagen.com",
     "JIT compiler with Haskell and C": "https://github.com/wowthedoge/Haskellpiler",
-    "TypeScript MCP SDK": "https://github.com/modelcontextprotocol/typescript-sdk"
+    "TypeScript MCP SDK": "https://github.com/modelcontextprotocol/typescript-sdk",
+    "oAuth DPoP enhancement": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop",
+    "token exchange": "https://datatracker.ietf.org/doc/html/rfc8693",
   };
 
   Object.keys(replaceWith).forEach(key => {
